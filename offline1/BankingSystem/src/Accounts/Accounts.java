@@ -4,6 +4,8 @@ public abstract class Accounts {
 
     public float balance;
 
+    public float interestRate;
+
     public int loan;
 
     public String name;
@@ -16,6 +18,14 @@ public abstract class Accounts {
 
     public void setBalance(float balance) {
         this.balance = balance;
+    }
+
+    public float getInterestRate() {
+        return interestRate;
+    }
+
+    public void setInterestRate(float interestRate) {
+        this.interestRate = interestRate;
     }
 
     public int getLoan() {

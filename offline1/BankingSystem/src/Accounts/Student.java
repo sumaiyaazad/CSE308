@@ -27,7 +27,7 @@ public class Student extends Accounts{
 
     @Override
     public void query(){
-        balance=(float)(balance*.05-loan*.1);
+        balance=(float)(balance*interestRate-loan*.1);
         if(loan!=0){
             System.out.println("Current Balance "+balance+"$, loan "+loan+"$");
             return;
