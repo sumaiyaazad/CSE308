@@ -34,7 +34,7 @@ public class Main {
                     fixedDeposit.create(inputArray[2],Integer.parseInt(inputArray[3]));
                     bank.getAccounts().add(fixedDeposit);
                 }
-                //print Accounts array
+                //print Accounts array from bank
                 for(Accounts account : bank.getAccounts()){
                     System.out.println(account.getName()+" "+account.getBalance());
                 }
