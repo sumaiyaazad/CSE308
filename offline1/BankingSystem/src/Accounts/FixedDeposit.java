@@ -1,6 +1,8 @@
 package Accounts;
 
 public class FixedDeposit extends Accounts{
+    public FixedDeposit() {
+    }
 
     @Override
     public void create(String accountName, int amount) {
@@ -39,6 +41,10 @@ public class FixedDeposit extends Accounts{
 
     @Override
     public void requestLoan(int amount) {
+        if(amount> bank.getInternalFund()){
+            System.out.println("Sorry! Bank has internal fund deficit");
+            return;
+        }
         if(amount> 100000){
             System.out.println("Sorry! Fixed deposit account maximum allowable loan amount is 100000");
             return;

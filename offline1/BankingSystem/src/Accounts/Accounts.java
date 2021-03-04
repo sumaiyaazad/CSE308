@@ -1,8 +1,11 @@
 package Accounts;
 
-public abstract class Accounts {
+import Bank.Bank;
 
+public abstract class Accounts {
     public float balance;
+
+    public Bank bank;
 
     public float interestRate;
 
@@ -11,6 +14,10 @@ public abstract class Accounts {
     public String name;
 
     public int year;
+
+    Accounts(){
+        bank=new Bank();
+    }
 
     public float getBalance() {
         return balance;

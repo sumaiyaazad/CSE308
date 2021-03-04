@@ -1,7 +1,18 @@
 package Employees;
 
+import Bank.Bank;
+
 public abstract class Employees {
-    public abstract void lookup();
+    private Bank bank;
+
+    Employees(){
+        bank=new Bank();
+    }
+
+    public void lookup(String AccountName) {
+
+        return;
+    };
 
     public abstract void approveLoan();
 

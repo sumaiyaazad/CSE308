@@ -1,6 +1,8 @@
 package Accounts;
 
 public class Student extends Accounts{
+    public Student() {
+    }
 
     @Override
     public void withdraw(int amount) {
@@ -17,6 +19,10 @@ public class Student extends Accounts{
 
     @Override
     public void requestLoan(int amount) {
+        if(amount> bank.getInternalFund()){
+            System.out.println("Sorry! Bank has internal fund deficit");
+            return;
+        }
         if(amount> 1000){
             System.out.println("Sorry! Student account maximum allowable loan amount is 1000");
             return;
