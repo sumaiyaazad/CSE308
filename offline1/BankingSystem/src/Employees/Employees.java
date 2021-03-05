@@ -1,5 +1,6 @@
 package Employees;
 
+import Accounts.Accounts;
 import Bank.Bank;
 
 public abstract class Employees {
@@ -10,8 +11,12 @@ public abstract class Employees {
     }
 
     public void lookup(String AccountName) {
-
-        return;
+        for(Accounts account:bank.getAccounts()){
+            if(account.getName().equals(AccountName)){
+                System.out.println("Current Balace ("+account.getName()+") :"+account.getBalance()+"$");
+                return;
+            }
+        }
     };
 
     public abstract void approveLoan();
