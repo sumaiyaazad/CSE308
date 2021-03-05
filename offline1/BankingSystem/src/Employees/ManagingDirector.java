@@ -1,6 +1,9 @@
 package Employees;
 
 public class ManagingDirector extends Employees{
+    public ManagingDirector() {
+    }
+
     @Override
     public void approveLoan() {
 
