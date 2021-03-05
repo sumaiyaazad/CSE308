@@ -19,9 +19,6 @@ public abstract class Accounts {
 
     public String type;
 
-    Accounts(){
-    }
-
     public float getBalance() {
         return (float)(balance+balance*interestRate*year-loan*.1*year);
     }

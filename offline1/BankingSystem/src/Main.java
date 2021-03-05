@@ -9,7 +9,7 @@ public class Main {
     public static void main(String[] args) {
         Bank bank = new Bank();
         Accounts userAccount=new Student();
-        Employees employee=new Cashier();
+        Employees employee=new Cashier("");
         String employeeName="";
         Scanner s = new Scanner(System.in);
         int checkCategory=-1;
@@ -85,63 +85,23 @@ public class Main {
                 }
             }
             if(input.startsWith("Open")){
-                String[] employeeList={"MD","O1","O2","C1","C2","C3","C4","C5"};
-                if(inputArray[1].equals("MD")){
-                    checkCategory=1;
-                    employeeName="MD";
-                    employee=bank.MD;
-                    System.out.println("MD Active, "+bank.getLoanRequests().size()+"loan requests pending");
+                for(Employees fixedEmployee:bank.getEmployees()){
+                    if(fixedEmployee.getName().equals(inputArray[1])){
+                        checkCategory=1;
+                        employee=fixedEmployee;
+                        System.out.println("MD Active, "+bank.getLoanRequests().size()+"loan requests pending");
+                        break;
+                    }
                 }
-                else if(inputArray[1].equals("O1")){
-                    checkCategory=1;
-                    employeeName="O1";
-                    employee=bank.O1;
-                    System.out.println("O1 Active, "+bank.getLoanRequests().size()+"loan requests pending");
+                if(check==1){
+                    continue;
                 }
-                else if(inputArray[1].equals("O2")){
-                    checkCategory=1;
-                    employeeName="O2";
-                    employee=bank.O2;
-                    System.out.println("O2 Active, "+bank.getLoanRequests().size()+"loan requests pending");
-                }
-                else if(inputArray[1].equals("C1")){
-                    checkCategory=1;
-                    employeeName="C1";
-                    employee=bank.C1;
-                    System.out.println("C1 Active, "+bank.getLoanRequests().size()+"loan requests pending");
-                }
-                else if(inputArray[1].equals("C2")){
-                    checkCategory=1;
-                    employeeName="C2";
-                    employee=bank.C2;
-                    System.out.println("C2 Active, "+bank.getLoanRequests().size()+"loan requests pending");
-                }
-                else if(inputArray[1].equals("C3")){
-                    checkCategory=1;
-                    employeeName="C3";
-                    employee=bank.C3;
-                    System.out.println("C3 Active, "+bank.getLoanRequests().size()+"loan requests pending");
-                }
-                else if(inputArray[1].equals("C4")){
-                    checkCategory=1;
-                    employeeName="C4";
-                    employee=bank.C4;
-                    System.out.println("C4 Active, "+bank.getLoanRequests().size()+"loan requests pending");
-                }
-                else if(inputArray[1].equals("C5")){
-                    checkCategory=1;
-                    employeeName="C5";
-                    employee=bank.C5;
-                    System.out.println("C5 Active, "+bank.getLoanRequests().size()+"loan requests pending");
-                }
-                else{
-                    for(Accounts account:bank.getAccounts()){
-                        if(account.getName().equals(inputArray[1])){
-                            checkCategory=0;
-                            userAccount=account;
-                            System.out.println("Welcome back!! "+userAccount.getName());
-                            break;
-                        }
+                for(Accounts account:bank.getAccounts()) {
+                    if (account.getName().equals(inputArray[1])) {
+                        checkCategory = 0;
+                        userAccount = account;
+                        System.out.println("Welcome back!! " + userAccount.getName());
+                        break;
                     }
                 }
             }
@@ -152,8 +112,16 @@ public class Main {
                 }
                 else if(checkCategory==1){
                     System.out.println("Operation closed for "+employeeName);
-                    employee=new Cashier();
+                    employee=new Cashier("");
                 }
+            }
+            if(input.startsWith("Lookup")){
+//                if(employee.getName().equals("")){
+//                    System.out.println("Open your account to lookup");
+//                }
+//                else{
+//                    employee.lookup(inputArray[1],bank);
+//                }
             }
         }
     }

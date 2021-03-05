@@ -1,6 +1,8 @@
 package Employees;
 
 public class Officer extends Employees{
-    public Officer() {
+    public Officer(String employeeName){
+        name=employeeName;
     }
+
 }

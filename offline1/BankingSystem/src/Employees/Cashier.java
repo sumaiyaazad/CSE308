@@ -3,7 +3,8 @@ package Employees;
 import Bank.Bank;
 
 public class Cashier extends Employees {
-    public Cashier() {
+    public Cashier(String employeeName){
+        name=employeeName;
     }
 
     @Override

@@ -9,6 +9,8 @@ import java.util.ArrayList;
 public class Bank {
     public ArrayList<Accounts> accounts;
 
+    public ArrayList<Employees> employees;
+
     public ManagingDirector MD;
 
     public Officer O1;
@@ -31,17 +33,30 @@ public class Bank {
 
     public Bank() {
         accounts = new ArrayList<Accounts>();
-        internalFund = 1000000;
-        MD = new ManagingDirector();
-        O1 = new Officer();
-        O2 = new Officer();
-        C1 = new Cashier();
-        C2 = new Cashier();
-        C3 = new Cashier();
-        C4 = new Cashier();
-        C5 = new Cashier();
+        employees = new ArrayList<Employees>();
         loanRequests = new ArrayList<Loan>();
+        internalFund = 1000000;
+        createEmployees();
         System.out.println("Bank Created; MD,S1,S2,C1,C2,C3,C4,C5 created");
+    }
+
+    private void createEmployees() {
+        MD = new ManagingDirector("MD");
+        O1 = new Officer("O1");
+        O2 = new Officer("O2");
+        C1 = new Cashier("C1");
+        C2 = new Cashier("C2");
+        C3 = new Cashier("C3");
+        C4 = new Cashier("C4");
+        C5 = new Cashier("C5");
+        employees.add(MD);
+        employees.add(O1);
+        employees.add(O2);
+        employees.add(C1);
+        employees.add(C2);
+        employees.add(C3);
+        employees.add(C4);
+        employees.add(C5);
     }
 
     public ArrayList<Accounts> getAccounts() {
@@ -66,6 +81,14 @@ public class Bank {
 
     public void setLoanRequests(ArrayList<Loan> loanRequests) {
         this.loanRequests = loanRequests;
+    }
+
+    public ArrayList<Employees> getEmployees() {
+        return employees;
+    }
+
+    public void setEmployees(ArrayList<Employees> employees) {
+        this.employees = employees;
     }
 
     public void inc() {

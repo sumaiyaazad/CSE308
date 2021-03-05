@@ -7,13 +7,17 @@ import Loan.Loan;
 import java.util.ArrayList;
 
 public abstract class Employees {
-    //public String Name;
+    public String name;
 
-    Employees(){
-        //bank=new Bank();
+    public String getName() {
+        return name;
     }
 
-    public void lookup(String AccountName,Bank bank) {
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void lookup(String AccountName, Bank bank) {
         for(Accounts account:bank.getAccounts()){
             if(account.getName().equals(AccountName)){
                 System.out.println("Current Balace ("+account.getName()+") : "+account.getBalance()+"$");

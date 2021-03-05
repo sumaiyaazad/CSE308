@@ -4,7 +4,8 @@ import Accounts.Accounts;
 import Bank.Bank;
 
 public class ManagingDirector extends Employees{
-    public ManagingDirector() {
+    public ManagingDirector(String employeeName){
+        name=employeeName;
     }
 
     @Override
