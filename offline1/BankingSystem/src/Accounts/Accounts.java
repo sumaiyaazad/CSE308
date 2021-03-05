@@ -11,6 +11,8 @@ public abstract class Accounts {
 
     public int loan;
 
+    public int maximumAllowableLoan;
+
     public String name;
 
     public int year;
@@ -41,6 +43,14 @@ public abstract class Accounts {
 
     public void setLoan(int loan) {
         this.loan = loan;
+    }
+
+    public int getMaximumAllowableLoan() {
+        return maximumAllowableLoan;
+    }
+
+    public void setMaximumAllowableLoan(int maximumAllowableLoan) {
+        this.maximumAllowableLoan = maximumAllowableLoan;
     }
 
     public String getName() {
@@ -75,7 +85,18 @@ public abstract class Accounts {
 
     public abstract void withdraw(int amount);
 
-    public abstract void requestLoan(int amount);
+    public void requestLoan(int amount){
+        if(amount> bank.getInternalFund()){
+            System.out.println("Sorry! Bank has internal fund deficit");
+            return;
+        }
+        if(amount> getMaximumAllowableLoan()){
+            System.out.println("Sorry! Maximum allowable loan amount for this account  is "+getMaximumAllowableLoan()+"$");
+            return;
+        }
+        System.out.println("Loan request successful, sent for approval");
+        // add loan in the loans array in Bank
+    };
 
     public void query(){
         if(loan!=0){

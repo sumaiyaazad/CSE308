@@ -3,6 +3,7 @@ package Accounts;
 public class FixedDeposit extends Accounts{
     public FixedDeposit() {
         setInterestRate((float) .15);
+        setMaximumAllowableLoan(100000);
     }
 
     @Override
@@ -42,19 +43,4 @@ public class FixedDeposit extends Accounts{
         balance-=amount;
         System.out.println(amount+"$ withdrawn; previous balance "+(balance+amount)+"$ current balance "+balance+"$");
     }
-
-    @Override
-    public void requestLoan(int amount) {
-        if(amount> bank.getInternalFund()){
-            System.out.println("Sorry! Bank has internal fund deficit");
-            return;
-        }
-        if(amount> 100000){
-            System.out.println("Sorry! Fixed deposit account maximum allowable loan amount is 100000");
-            return;
-        }
-        System.out.println("Loan request successful, sent for approval");
-        // add loan in the loans array in Bank
-    }
-
 }
