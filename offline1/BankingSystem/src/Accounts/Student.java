@@ -4,6 +4,7 @@ public class Student extends Accounts{
     public Student() {
         setInterestRate((float) .05);
         setMaximumAllowableLoan( 1000);
+        setType("Student");
     }
 
     @Override

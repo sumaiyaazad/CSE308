@@ -10,11 +10,6 @@ public class Officer extends Employees{
     }
 
     @Override
-    public void change() {
-
-    }
-
-    @Override
     public void see() {
 
     }

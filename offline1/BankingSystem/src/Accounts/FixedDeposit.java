@@ -4,6 +4,7 @@ public class FixedDeposit extends Accounts{
     public FixedDeposit() {
         setInterestRate((float) .15);
         setMaximumAllowableLoan(100000);
+        setType("FixedDeposit");
     }
 
     @Override

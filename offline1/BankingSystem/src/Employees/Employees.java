@@ -13,7 +13,7 @@ public abstract class Employees {
     public void lookup(String AccountName,Bank bank) {
         for(Accounts account:bank.getAccounts()){
             if(account.getName().equals(AccountName)){
-                System.out.println("Current Balace ("+account.getName()+") :"+account.getBalance()+"$");
+                System.out.println("Current Balace ("+account.getName()+") : "+account.getBalance()+"$");
                 return;
             }
         }
@@ -21,7 +21,9 @@ public abstract class Employees {
 
     public abstract void approveLoan();
 
-    public abstract void change();
+    public void change(String accountType,float interestRate,Bank bank){
+        System.out.println("You don’t have permission for this operation");
+    };
 
     public abstract void see();
 }

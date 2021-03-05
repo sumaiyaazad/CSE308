@@ -4,6 +4,7 @@ public class Savings extends Accounts{
     public Savings() {
         setInterestRate((float) .1);
         setMaximumAllowableLoan( 10000);
+        setType("Savings");
     }
 
     @Override

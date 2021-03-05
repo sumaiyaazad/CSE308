@@ -90,49 +90,49 @@ public class Main {
                     checkCategory=1;
                     employeeName="MD";
                     employee=bank.MD;
-                    employee.lookup("Alice",bank);
+                    System.out.println("MD Active");
                 }
                 else if(inputArray[1].equals("O1")){
                     checkCategory=1;
                     employeeName="O1";
                     employee=bank.O1;
-                    employee.lookup("Alice",bank);
+                    System.out.println("O1 Active");
                 }
                 else if(inputArray[1].equals("O2")){
                     checkCategory=1;
                     employeeName="O2";
                     employee=bank.O2;
-                    employee.lookup("Alice",bank);
+                    System.out.println("O2 Active");
                 }
                 else if(inputArray[1].equals("C1")){
                     checkCategory=1;
                     employeeName="C1";
                     employee=bank.C1;
-                    employee.lookup("Alice",bank);
+                    System.out.println("C1 Active");
                 }
                 else if(inputArray[1].equals("C2")){
                     checkCategory=1;
                     employeeName="C2";
                     employee=bank.C2;
-                    employee.lookup("Alice",bank);
+                    System.out.println("C2 Active");
                 }
                 else if(inputArray[1].equals("C3")){
                     checkCategory=1;
                     employeeName="C3";
                     employee=bank.C3;
-                    employee.lookup("Alice",bank);
+                    System.out.println("C3 Active");
                 }
                 else if(inputArray[1].equals("C4")){
                     checkCategory=1;
                     employeeName="C4";
                     employee=bank.C4;
-                    employee.lookup("Alice",bank);
+                    System.out.println("C4 Active");
                 }
                 else if(inputArray[1].equals("C5")){
                     checkCategory=1;
                     employeeName="C5";
                     employee=bank.C5;
-                    employee.lookup("Alice",bank);
+                    System.out.println("C5 Active");
                 }
                 else{
                     for(Accounts account:bank.getAccounts()){

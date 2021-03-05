@@ -15,6 +15,8 @@ public abstract class Accounts {
 
     public int year;
 
+    public String type;
+
     Accounts(){
     }
 
@@ -64,6 +66,14 @@ public abstract class Accounts {
 
     public void setYear(int year) {
         this.year = year;
+    }
+
+    public String getType() {
+        return type;
+    }
+
+    public void setType(String type) {
+        this.type = type;
     }
 
     public int create(String accountName, int amount){
