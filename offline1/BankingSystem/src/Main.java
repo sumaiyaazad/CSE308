@@ -130,6 +130,14 @@ public class Main {
                     employee.approveLoan(bank);
                 }
             }
+            if(input.startsWith("Change")){
+                if(employee.getName().equals("")){
+                    System.out.println("Open your account to change interest rate");
+                }
+                else{
+                    employee.change(inputArray[1],Float.parseFloat(inputArray[2]),bank);
+                }
+            }
         }
     }
 }
