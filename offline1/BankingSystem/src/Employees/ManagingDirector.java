@@ -22,7 +22,7 @@ public class ManagingDirector extends Employees{
     }
 
     @Override
-    public void see() {
-
+    public void see(Bank bank) {
+        System.out.println("Internal Fund : "+bank.getInternalFund()+"$");
     }
 }

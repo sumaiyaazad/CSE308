@@ -8,9 +8,4 @@ public class Officer extends Employees{
     public void approveLoan() {
 
     }
-
-    @Override
-    public void see() {
-
-    }
 }

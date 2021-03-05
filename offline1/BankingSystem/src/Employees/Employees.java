@@ -25,5 +25,7 @@ public abstract class Employees {
         System.out.println("You don’t have permission for this operation");
     };
 
-    public abstract void see();
+    public  void see(Bank bank){
+        System.out.println("You don’t have permission for this operation");
+    };
 }
