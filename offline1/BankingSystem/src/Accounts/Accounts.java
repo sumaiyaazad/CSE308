@@ -20,7 +20,7 @@ public abstract class Accounts {
     }
 
     public float getBalance() {
-        return balance;
+        return (float)(balance+balance*interestRate*year-loan*.1*year);
     }
 
     public void setBalance(float balance) {
@@ -77,6 +77,12 @@ public abstract class Accounts {
 
     public abstract void requestLoan(int amount);
 
-    public abstract void query();
+    public void query(){
+        if(loan!=0){
+            System.out.println("Current Balance "+getBalance()+"$, loan "+loan+"$");
+            return;
+        }
+        System.out.println("Current Balance "+balance+"$");
+    };
 
 }

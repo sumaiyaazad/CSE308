@@ -63,6 +63,14 @@ public class Main {
                     userAccount.withdraw(Integer.parseInt(inputArray[1]));
                 }
             }
+            if(input.startsWith("Query")){
+                if(userAccount.getName()==null){
+                    System.out.println("Open/Create your account to deposit");
+                }
+                else{
+                    userAccount.query();
+                }
+            }
         }
     }
 }

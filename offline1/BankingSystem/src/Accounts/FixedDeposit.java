@@ -2,6 +2,7 @@ package Accounts;
 
 public class FixedDeposit extends Accounts{
     public FixedDeposit() {
+        setInterestRate((float) .15);
     }
 
     @Override
@@ -56,13 +57,4 @@ public class FixedDeposit extends Accounts{
         // add loan in the loans array in Bank
     }
 
-    @Override
-    public void query(){
-        balance=(float)(balance*interestRate-loan*.1);
-        if(loan!=0){
-            System.out.println("Current Balance "+balance+"$, loan "+loan+"$");
-            return;
-        }
-        System.out.println("Current Balance "+balance+"$");
-    }
 }
