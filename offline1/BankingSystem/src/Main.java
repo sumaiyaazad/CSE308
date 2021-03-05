@@ -7,29 +7,30 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         Bank bank = new Bank();
-        Accounts userAccount;
+        Accounts userAccount=new Student();
         Scanner s = new Scanner(System.in);
-        int check=0;
         for (int i = 0; ; i++) {
+            int check=0;
             String input = s.nextLine();
+            String[] inputArray = input.split("\\s+");
             if (input.startsWith("Create")) {
-                String[] inputArray = input.split("\\s+");
                 //System.out.println("inputArray: "+inputArray[1]);
                 //System.out.println("Accounts array: "+bank.getAccounts());
                 for (Accounts account : bank.getAccounts()) {
                     if (account.getName().equals(inputArray[2])) {
                         System.out.println("Sorry! Could not create account(name already taken)");
+                        check=1;
                         break;
                     }
+                }
+                if(check==1){
+                    continue;
                 }
                if (inputArray[1].equals("Savings")) {
                     userAccount = new Savings();
                 }
                 else if (inputArray[1].equals("FixedDeposit")) {
                     userAccount = new FixedDeposit();
-                }
-                else{
-                    userAccount=new Student();
                 }
                 check=userAccount.create(inputArray[2], Integer.parseInt(inputArray[3]));
                 if(check==1){
@@ -42,7 +43,14 @@ public class Main {
                     }
                 }
             }
-
+            if(input.startsWith("Deposit")){
+                if(userAccount.getName()==null){
+                    System.out.println("Open/Create your account to deposit");
+                }
+                else{
+                    userAccount.deposit(Integer.parseInt(inputArray[1]));
+                }
+            }
         }
     }
 }
