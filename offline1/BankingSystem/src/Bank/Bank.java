@@ -30,7 +30,6 @@ public class Bank {
 
     public Bank() {
         accounts = new ArrayList<Accounts>();
-        employees = new ArrayList<Employees>();
         internalFund = 1000000;
         MD = new ManagingDirector();
         O1 = new Officer();
@@ -41,6 +40,7 @@ public class Bank {
         C4 = new Cashier();
         C5 = new Cashier();
 //        loanRequests = new ArrayList<Object>();
+        System.out.println("Bank Created; MD,S1,S2,C1,C2,C3,C4,C5 created");
     }
 
     public ArrayList<Accounts> getAccounts() {

@@ -5,8 +5,6 @@ import Bank.Bank;
 public abstract class Accounts {
     public float balance;
 
-    public Bank bank;
-
     public float interestRate;
 
     public int loan;
@@ -18,7 +16,6 @@ public abstract class Accounts {
     public int year;
 
     Accounts(){
-        bank=new Bank();
     }
 
     public float getBalance() {
@@ -86,7 +83,7 @@ public abstract class Accounts {
     public abstract void withdraw(int amount);
 
     public void requestLoan(int amount){
-        if(amount> bank.getInternalFund()){
+        if(amount> 1000000){
             System.out.println("Sorry! Bank has internal fund deficit");
             return;
         }
