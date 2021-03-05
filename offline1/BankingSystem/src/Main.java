@@ -90,49 +90,49 @@ public class Main {
                     checkCategory=1;
                     employeeName="MD";
                     employee=bank.MD;
-                    System.out.println("MD Active");
+                    System.out.println("MD Active, "+bank.getLoanRequests().size()+"loan requests pending");
                 }
                 else if(inputArray[1].equals("O1")){
                     checkCategory=1;
                     employeeName="O1";
                     employee=bank.O1;
-                    System.out.println("O1 Active");
+                    System.out.println("O1 Active, "+bank.getLoanRequests().size()+"loan requests pending");
                 }
                 else if(inputArray[1].equals("O2")){
                     checkCategory=1;
                     employeeName="O2";
                     employee=bank.O2;
-                    System.out.println("O2 Active");
+                    System.out.println("O2 Active, "+bank.getLoanRequests().size()+"loan requests pending");
                 }
                 else if(inputArray[1].equals("C1")){
                     checkCategory=1;
                     employeeName="C1";
                     employee=bank.C1;
-                    System.out.println("C1 Active");
+                    System.out.println("C1 Active, "+bank.getLoanRequests().size()+"loan requests pending");
                 }
                 else if(inputArray[1].equals("C2")){
                     checkCategory=1;
                     employeeName="C2";
                     employee=bank.C2;
-                    System.out.println("C2 Active");
+                    System.out.println("C2 Active, "+bank.getLoanRequests().size()+"loan requests pending");
                 }
                 else if(inputArray[1].equals("C3")){
                     checkCategory=1;
                     employeeName="C3";
                     employee=bank.C3;
-                    System.out.println("C3 Active");
+                    System.out.println("C3 Active, "+bank.getLoanRequests().size()+"loan requests pending");
                 }
                 else if(inputArray[1].equals("C4")){
                     checkCategory=1;
                     employeeName="C4";
                     employee=bank.C4;
-                    System.out.println("C4 Active");
+                    System.out.println("C4 Active, "+bank.getLoanRequests().size()+"loan requests pending");
                 }
                 else if(inputArray[1].equals("C5")){
                     checkCategory=1;
                     employeeName="C5";
                     employee=bank.C5;
-                    System.out.println("C5 Active");
+                    System.out.println("C5 Active, "+bank.getLoanRequests().size()+"loan requests pending");
                 }
                 else{
                     for(Accounts account:bank.getAccounts()){
