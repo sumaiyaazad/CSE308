@@ -138,6 +138,14 @@ public class Main {
                     employee.change(inputArray[1],Float.parseFloat(inputArray[2]),bank);
                 }
             }
+            if(input.startsWith("See")){
+                if(employee.getName().equals("")){
+                    System.out.println("Open your account to see internal fund");
+                }
+                else{
+                    employee.see(bank);
+                }
+            }
         }
     }
 }
