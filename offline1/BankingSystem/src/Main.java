@@ -10,7 +10,6 @@ public class Main {
         Bank bank = new Bank();
         Accounts userAccount=new Student();
         Employees employee=new Cashier("");
-        String employeeName="";
         Scanner s = new Scanner(System.in);
         int checkCategory=-1;
         for (int i = 0; ; i++) {
@@ -89,7 +88,7 @@ public class Main {
                     if(fixedEmployee.getName().equals(inputArray[1])){
                         checkCategory=1;
                         employee=fixedEmployee;
-                        System.out.println("MD Active, "+bank.getLoanRequests().size()+"loan requests pending");
+                        System.out.println("MD Active, "+bank.getLoanRequests().size()+" loan requests pending");
                         break;
                     }
                 }
@@ -111,17 +110,17 @@ public class Main {
                     userAccount=new Student();
                 }
                 else if(checkCategory==1){
-                    System.out.println("Operation closed for "+employeeName);
+                    System.out.println("Operation closed for "+employee.getName());
                     employee=new Cashier("");
                 }
             }
             if(input.startsWith("Lookup")){
-//                if(employee.getName().equals("")){
-//                    System.out.println("Open your account to lookup");
-//                }
-//                else{
-//                    employee.lookup(inputArray[1],bank);
-//                }
+                if(employee.getName().equals("")){
+                    System.out.println("Open your account to lookup");
+                }
+                else{
+                    employee.lookup(inputArray[1],bank);
+                }
             }
         }
     }
