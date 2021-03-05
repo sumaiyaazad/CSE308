@@ -71,6 +71,14 @@ public class Main {
                     userAccount.query();
                 }
             }
+            if(input.startsWith("Request")){
+                if(userAccount.getName()==null){
+                    System.out.println("Open/Create your account to deposit");
+                }
+                else{
+                    userAccount.requestLoan(Integer.parseInt(inputArray[1]));
+                }
+            }
         }
     }
 }
