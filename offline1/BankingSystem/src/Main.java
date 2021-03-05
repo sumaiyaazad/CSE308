@@ -135,7 +135,7 @@ public class Main {
                     System.out.println("Open your account to change interest rate");
                 }
                 else{
-                    employee.change(inputArray[1],Float.parseFloat(inputArray[2]),bank);
+                    employee.change(inputArray[1],Float.parseFloat(inputArray[2])/100,bank);
                 }
             }
             if(input.startsWith("See")){
