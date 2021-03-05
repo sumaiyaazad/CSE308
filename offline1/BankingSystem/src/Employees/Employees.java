@@ -2,6 +2,9 @@ package Employees;
 
 import Accounts.Accounts;
 import Bank.Bank;
+import Loan.Loan;
+
+import java.util.ArrayList;
 
 public abstract class Employees {
     //public String Name;
@@ -19,7 +22,14 @@ public abstract class Employees {
         }
     };
 
-    public abstract void approveLoan();
+    public void approveLoan(Bank bank){
+        for(Loan loan:bank.getLoanRequests()){
+            loan.getAccount().setLoan(loan.getAccount().getLoan()+loan.getRequestedLoanAmount());
+            loan.getAccount().setBalance(loan.getAccount().getBalance()+loan.getRequestedLoanAmount());
+            System.out.println("Loan for "+loan.getAccount().getName()+" approved");
+        }
+        bank.setLoanRequests(new ArrayList<Loan>());
+    };
 
     public void change(String accountType,float interestRate,Bank bank){
         System.out.println("You don’t have permission for this operation");

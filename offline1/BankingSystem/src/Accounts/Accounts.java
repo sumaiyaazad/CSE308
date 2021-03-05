@@ -2,6 +2,8 @@ package Accounts;
 
 import Bank.Bank;
 
+import Loan.Loan;
+
 public abstract class Accounts {
     public float balance;
 
@@ -92,8 +94,8 @@ public abstract class Accounts {
 
     public abstract void withdraw(int amount);
 
-    public void requestLoan(int amount){
-        if(amount> 1000000){
+    public void requestLoan(int amount,Bank bank){
+        if(amount> bank.getInternalFund()){
             System.out.println("Sorry! Bank has internal fund deficit");
             return;
         }
@@ -103,6 +105,7 @@ public abstract class Accounts {
         }
         System.out.println("Loan request successful, sent for approval");
         // add loan in the loans array in Bank
+        bank.getLoanRequests().add(new Loan(this,amount));
     };
 
     public void query(){

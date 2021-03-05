@@ -8,11 +8,6 @@ public class ManagingDirector extends Employees{
     }
 
     @Override
-    public void approveLoan() {
-
-    }
-
-    @Override
     public void change(String accountType, float interestRate, Bank bank) {
         for(Accounts account:bank.getAccounts()){
             if(account.getType().equals(accountType)){

@@ -81,7 +81,7 @@ public class Main {
                     System.out.println("Open/Create your account to deposit");
                 }
                 else{
-                    userAccount.requestLoan(Integer.parseInt(inputArray[1]));
+                    userAccount.requestLoan(Integer.parseInt(inputArray[1]),bank);
                 }
             }
             if(input.startsWith("Open")){

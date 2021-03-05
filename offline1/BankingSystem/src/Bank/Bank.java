@@ -2,6 +2,7 @@ package Bank;
 
 import Accounts.*;
 import Employees.*;
+import Loan.Loan;
 
 import java.util.ArrayList;
 
@@ -26,7 +27,7 @@ public class Bank {
 
     public int internalFund;
 
-//    public ArrayList<Object> loanRequests;
+    public ArrayList<Loan> loanRequests;
 
     public Bank() {
         accounts = new ArrayList<Accounts>();
@@ -39,7 +40,7 @@ public class Bank {
         C3 = new Cashier();
         C4 = new Cashier();
         C5 = new Cashier();
-//        loanRequests = new ArrayList<Object>();
+        loanRequests = new ArrayList<Loan>();
         System.out.println("Bank Created; MD,S1,S2,C1,C2,C3,C4,C5 created");
     }
 
@@ -59,13 +60,13 @@ public class Bank {
         this.internalFund = internalFund;
     }
 
-//    public ArrayList<Object> getLoanRequests() {
-//        return loanRequests;
-//    }
-//
-//    public void setLoanRequests(ArrayList<Object> loanRequests) {
-//        this.loanRequests = loanRequests;
-//    }
+    public ArrayList<Loan> getLoanRequests() {
+        return loanRequests;
+    }
+
+    public void setLoanRequests(ArrayList<Loan> loanRequests) {
+        this.loanRequests = loanRequests;
+    }
 
     public void inc() {
         if (accounts.size() == 0) {
