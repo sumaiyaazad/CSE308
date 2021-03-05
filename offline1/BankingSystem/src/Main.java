@@ -88,7 +88,7 @@ public class Main {
                     if(fixedEmployee.getName().equals(inputArray[1])){
                         checkCategory=1;
                         employee=fixedEmployee;
-                        System.out.println("MD Active, "+bank.getLoanRequests().size()+" loan requests pending");
+                        System.out.println(employee.getName()+" Active, "+bank.getLoanRequests().size()+" loan requests pending");
                         break;
                     }
                 }
@@ -120,6 +120,14 @@ public class Main {
                 }
                 else{
                     employee.lookup(inputArray[1],bank);
+                }
+            }
+            if(input.startsWith("Approve Loan")){
+                if(employee.getName().equals("")){
+                    System.out.println("Open your account to approve loan");
+                }
+                else{
+                    employee.approveLoan(bank);
                 }
             }
         }
