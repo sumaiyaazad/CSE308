@@ -24,7 +24,7 @@ public class Main {
                 //System.out.println("inputArray: "+inputArray[1]);
                 //System.out.println("Accounts array: "+bank.getAccounts());
                 for (Accounts account : bank.getAccounts()) {
-                    if (account.getName().equals(inputArray[2])) {
+                    if (account.getName().equals(inputArray[1])) {
                         System.out.println("Sorry! Could not create account(name already taken)");
                         check=1;
                         break;
@@ -33,23 +33,23 @@ public class Main {
                 if(check==1){
                     continue;
                 }
-               if (inputArray[1].equals("Savings")) {
+               if (inputArray[2].equals("Savings")) {
                     userAccount = new Savings();
                 }
-                else if (inputArray[1].equals("FixedDeposit")) {
+                else if (inputArray[2].equals("FixedDeposit")) {
                     userAccount = new FixedDeposit();
                 }
-                check=userAccount.create(inputArray[2], Integer.parseInt(inputArray[3]));
+                check=userAccount.create(inputArray[1], Integer.parseInt(inputArray[3]));
                 if(check==1){
                     bank.getAccounts().add(userAccount);
                 }
                 checkCategory=0;
                 //print Accounts array from bank
-                if (bank.getAccounts().size() != 0) {
-                    for (Accounts account : bank.getAccounts()) {
-                        System.out.println(account.getName() + " " + account.getBalance());
-                    }
-                }
+//                if (bank.getAccounts().size() != 0) {
+//                    for (Accounts account : bank.getAccounts()) {
+//                        System.out.println(account.getName() + " " + account.getBalance());
+//                    }
+//                }
             }
             if(input.startsWith("Deposit")){
                 if(userAccount.getName()==null){
