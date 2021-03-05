@@ -5,15 +5,17 @@ public class FixedDeposit extends Accounts{
     }
 
     @Override
-    public void create(String accountName, int amount) {
+    public int create(String accountName, int amount) {
         if(amount<100000){
            System.out.println("Sorry! Initial deposit amount of a fixed deposit account at least 100000$");
-           return;
+           return 0;
         }
         balance=amount;
         loan=0;
         name=accountName;
         year=0;
+        System.out.println("Student account for "+name+" Created; initial balance "+balance+"$");
+        return 1;
     }
 
     @Override

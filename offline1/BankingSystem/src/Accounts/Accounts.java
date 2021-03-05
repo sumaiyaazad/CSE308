@@ -59,12 +59,13 @@ public abstract class Accounts {
         this.year = year;
     }
 
-    public void create(String accountName, int amount){
+    public int create(String accountName, int amount){
         balance=amount;
         loan=0;
         name=accountName;
         year=0;
         System.out.println("Student account for "+name+" Created; initial balance "+balance+"$");
+        return 1;
     };
 
     public void deposit(int amount){
