@@ -54,4 +54,12 @@ public class Bank {
 //    public void setLoanRequests(ArrayList<Object> loanRequests) {
 //        this.loanRequests = loanRequests;
 //    }
+    public void inc(){
+        if(accounts.size()==0){
+            return;
+        }
+        for(Accounts account:accounts){
+            account.setYear(account.getYear()+1);
+        }
+    }
 }

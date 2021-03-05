@@ -13,6 +13,10 @@ public class Main {
             int check=0;
             String input = s.nextLine();
             String[] inputArray = input.split("\\s+");
+            if(input.startsWith("INC")){
+                bank.inc();
+                System.out.println("1 year passed");
+            }
             if (input.startsWith("Create")) {
                 //System.out.println("inputArray: "+inputArray[1]);
                 //System.out.println("Accounts array: "+bank.getAccounts());
@@ -49,6 +53,14 @@ public class Main {
                 }
                 else{
                     userAccount.deposit(Integer.parseInt(inputArray[1]));
+                }
+            }
+            if(input.startsWith("Withdraw")){
+                if(userAccount.getName()==null){
+                    System.out.println("Open/Create your account to deposit");
+                }
+                else{
+                    userAccount.withdraw(Integer.parseInt(inputArray[1]));
                 }
             }
         }

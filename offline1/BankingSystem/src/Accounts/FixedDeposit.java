@@ -39,6 +39,7 @@ public class FixedDeposit extends Accounts{
             return;
         }
         balance-=amount;
+        System.out.println(amount+"$ withdrawn; previous balance "+(balance+amount)+"$ current balance "+balance+"$");
     }
 
     @Override
