@@ -1,9 +1,9 @@
-public class Diamond implements PackageBuilder {
+public class PackageDiamond implements PackageBuilder {
     Package diamondPackage;
     AbstractFactory hdfactory;
     AbstractFactory wsfactory;
 
-    public Diamond(String internetType, String webType) {
+    public PackageDiamond(String internetType, String webType) {
         diamondPackage = new Package();
         hdfactory = FactoryProducer.getFactory("hardwaredevicefactory");
         wsfactory = FactoryProducer.getFactory("webserverfactory");

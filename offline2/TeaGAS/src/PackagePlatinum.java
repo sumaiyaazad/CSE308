@@ -1,9 +1,9 @@
-public class Platinum implements PackageBuilder {
+public class PackagePlatinum implements PackageBuilder {
     Package platinumPackage;
     AbstractFactory hdfactory;
     AbstractFactory wsfactory;
 
-    public Platinum(String internetType, String webType) {
+    public PackagePlatinum(String internetType, String webType) {
         platinumPackage = new Package();
         hdfactory = FactoryProducer.getFactory("hardwaredevicefactory");
         wsfactory = FactoryProducer.getFactory("webserverfactory");

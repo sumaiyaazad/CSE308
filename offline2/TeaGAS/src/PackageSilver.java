@@ -1,9 +1,9 @@
-public class Silver implements PackageBuilder {
+public class PackageSilver implements PackageBuilder {
     Package silverPackage;
     AbstractFactory hdfactory;
     AbstractFactory wsfactory;
 
-    public Silver(String internetType,String webType) {
+    public PackageSilver(String internetType, String webType) {
         if(internetType.equalsIgnoreCase("ethernet")){
             System.out.println("Silver package supports Wifi and GSM internet connection");
             System.out.println("Silver package creation failed");

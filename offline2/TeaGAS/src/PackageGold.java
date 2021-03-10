@@ -1,9 +1,9 @@
-public class Gold implements PackageBuilder {
+public class PackageGold implements PackageBuilder {
     Package goldPackage;
     AbstractFactory hdfactory;
     AbstractFactory wsfactory;
 
-    public Gold(String internetType, String webType) {
+    public PackageGold(String internetType, String webType) {
         if(internetType.equalsIgnoreCase("ethernet")){
             System.out.println("Gold package supports Wifi and GSM internet connection");
             System.out.println("Gold package creation failed");
