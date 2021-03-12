@@ -4,8 +4,8 @@ public class Editor {
     public Aesthetics colorAesthetics=new Color();
     public Aesthetics styleAesthetics=new Style();
     Editor(String language){
-        styleAesthetics.setAesthetics("Normal");
-        colorAesthetics.setAesthetics("Blue");
+//        styleAesthetics.setAesthetics("Normal");
+//        colorAesthetics.setAesthetics("Blue");
         if(language.equalsIgnoreCase("python")){
             parser=new Python();
             fontAesthetics.setAesthetics("Consolas");
@@ -19,7 +19,13 @@ public class Editor {
             fontAesthetics.setAesthetics("Courier New");
         }
     }
-    public void executeParsing(){
-        parser.parseLanguage();
+    public void executeParsing(String filename){
+        parser.parseLanguage(filename);
+    }
+    public void setStyle(String type){
+        styleAesthetics.setAesthetics(type);
+    }
+    public void setColor(String type){
+        colorAesthetics.setAesthetics(type);
     }
 }

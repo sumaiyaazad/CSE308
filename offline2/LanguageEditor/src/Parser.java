@@ -1,3 +1,3 @@
 public interface Parser {
-    void parseLanguage();
+    void parseLanguage(String filename);
 }
