@@ -10,7 +10,9 @@ public class PackagePlatinum implements PackageBuilder {
         platinumPackage.setProcessorController(hdfactory.getProCon("raspberrypi"));
         platinumPackage.setWeightMeasurement(hdfactory.getWeightMeasurement("weightmodule"));
         platinumPackage.setInternetConnection(hdfactory.getInternetConnect(internetType));
-        platinumPackage.setWebServer(hdfactory.getWebServer(webType));
+        platinumPackage.setWebServer(wsfactory.getWebServer(webType));
+        platinumPackage.setIdentification(hdfactory.getIdentification("nfc"));
+        platinumPackage.setDisplay(hdfactory.getDisplay("touchscreen"));
     }
 
     @Override
@@ -30,11 +32,7 @@ public class PackagePlatinum implements PackageBuilder {
 
     @Override
     public void showStore() {
-        platinumPackage.getStorage().getStoreInfo();
-    }
-
-    @Override
-    public void display() {
         platinumPackage.getDisplay().displayInfo();
+        System.out.println("Storage Info from raspberrypi storage...");
     }
 }

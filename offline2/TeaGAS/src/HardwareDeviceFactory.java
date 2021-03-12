@@ -20,6 +20,9 @@ public class HardwareDeviceFactory extends AbstractFactory{
         else if(type.equalsIgnoreCase("led")){
             return new LED();
         }
+        else if(type.equalsIgnoreCase("touchscreen")){
+            return new TouchScreen();
+        }
         else{
             return null;
         }

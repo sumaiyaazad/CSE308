@@ -1,22 +1,22 @@
 import Interface.*;
 
 public class Package {
-    private Controller controller;
+//    private Controller controller;
     private Display display;
     private Identification identification;
     private InternetConnection internetConnection;
     private ProCon processorController;
-    private Storage storage;
+//    private Storage storage;
     private WebServer webServer;
     private WeightMeasurement weightMeasurement;
 
     public Package() {
     }
 
-    public void setController(Controller controller) {
-        this.controller = controller;
-    }
-
+//    public void setController(Controller controller) {
+//        this.controller = controller;
+//    }
+//
     public void setDisplay(Display display) {
         this.display = display;
     }
@@ -33,9 +33,9 @@ public class Package {
         this.processorController = processorController;
     }
 
-    public void setStorage(Storage storage) {
-        this.storage = storage;
-    }
+//    public void setStorage(Storage storage) {
+//        this.storage = storage;
+//    }
 
     public void setWebServer(WebServer webServer) {
         this.webServer = webServer;
@@ -45,10 +45,10 @@ public class Package {
         this.weightMeasurement = weightMeasurement;
     }
 
-    public Controller getController() {
-        return controller;
-    }
-
+//    public Controller getController() {
+//        return controller;
+//    }
+//
     public Display getDisplay() {
         return display;
     }
@@ -65,9 +65,9 @@ public class Package {
         return processorController;
     }
 
-    public Storage getStorage() {
-        return storage;
-    }
+//    public Storage getStorage() {
+//        return storage;
+//    }
 
     public WebServer getWebServer() {
         return webServer;

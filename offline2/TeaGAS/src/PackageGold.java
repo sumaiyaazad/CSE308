@@ -1,20 +1,31 @@
+import Interface.Controller;
+import Interface.Storage;
+
 public class PackageGold implements PackageBuilder {
     Package goldPackage;
+    Controller button;
+    Storage sd;
+
     AbstractFactory hdfactory;
     AbstractFactory wsfactory;
 
     public PackageGold(String internetType, String webType) {
-        if(internetType.equalsIgnoreCase("ethernet")){
-            System.out.println("Gold package supports Wifi and GSM internet connection");
-            System.out.println("Gold package creation failed");
-        }
+//        if(internetType.equalsIgnoreCase("ethernet")){
+//            System.out.println("Gold package supports Wifi and GSM internet connection");
+//            System.out.println("Gold package creation failed");
+//            return;
+//        }
         goldPackage = new Package();
         hdfactory = FactoryProducer.getFactory("hardwaredevicefactory");
         wsfactory = FactoryProducer.getFactory("webserverfactory");
         goldPackage.setProcessorController(hdfactory.getProCon("arduinomega"));
         goldPackage.setWeightMeasurement(hdfactory.getWeightMeasurement("weightmodule"));
         goldPackage.setInternetConnection(hdfactory.getInternetConnect(internetType));
-        goldPackage.setWebServer(hdfactory.getWebServer(webType));
+        goldPackage.setWebServer(wsfactory.getWebServer(webType));
+        goldPackage.setIdentification(hdfactory.getIdentification("rfid"));
+        goldPackage.setDisplay(hdfactory.getDisplay("led"));
+        button= hdfactory.getController("button");
+        sd= hdfactory.getStorage("sd");
     }
 
     @Override
@@ -34,11 +45,7 @@ public class PackageGold implements PackageBuilder {
 
     @Override
     public void showStore() {
-        goldPackage.getStorage().getStoreInfo();
-    }
-
-    @Override
-    public void display() {
         goldPackage.getDisplay().displayInfo();
+        sd.getStoreInfo();
     }
 }

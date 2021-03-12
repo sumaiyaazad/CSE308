@@ -3,5 +3,4 @@ public interface PackageBuilder{
     void measureWeight();
     void identify();
     void showStore();
-    void display();
 }

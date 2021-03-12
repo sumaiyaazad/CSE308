@@ -10,7 +10,9 @@ public class PackageDiamond implements PackageBuilder {
         diamondPackage.setProcessorController(hdfactory.getProCon("raspberrypi"));
         diamondPackage.setWeightMeasurement(hdfactory.getWeightMeasurement("loadsensor"));
         diamondPackage.setInternetConnection(hdfactory.getInternetConnect(internetType));
-        diamondPackage.setWebServer(hdfactory.getWebServer(webType));
+        diamondPackage.setWebServer(wsfactory.getWebServer(webType));
+        diamondPackage.setIdentification(hdfactory.getIdentification("nfc"));
+        diamondPackage.setDisplay(hdfactory.getDisplay("touchscreen"));
     }
 
     @Override
@@ -30,11 +32,8 @@ public class PackageDiamond implements PackageBuilder {
 
     @Override
     public void showStore() {
-        diamondPackage.getStorage().getStoreInfo();
+        diamondPackage.getDisplay().displayInfo();
+        System.out.println("Storage Info from raspberrypi storage...");
     }
 
-    @Override
-    public void display() {
-        diamondPackage.getDisplay().displayInfo();
-    }
 }

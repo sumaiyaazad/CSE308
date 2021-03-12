@@ -4,7 +4,7 @@ import Interface.Storage;
 
 public class SD implements Storage {
     public SD() {
-        System.out.println("Added SD");
+        System.out.println("Manually added SD storage");
     }
 
     @Override
