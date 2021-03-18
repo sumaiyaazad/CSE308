@@ -3,12 +3,12 @@ import Interface.Implementation.Button;
 import Interface.Storage;
 
 public class PackageSilver implements PackageBuilder {
-    Package silverPackage;
-    Controller button;
-    Storage sd;
+    private Package silverPackage;
+    private Controller button;
+    private Storage sd;
 
-    AbstractFactory hdfactory;
-    AbstractFactory wsfactory;
+    private AbstractFactory hdfactory;
+    private AbstractFactory wsfactory;
 
     public PackageSilver(String internetType, String webType) {
 //        if(internetType.equalsIgnoreCase("ethernet")){

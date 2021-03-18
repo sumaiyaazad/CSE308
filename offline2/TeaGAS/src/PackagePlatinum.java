@@ -1,7 +1,7 @@
 public class PackagePlatinum implements PackageBuilder {
-    Package platinumPackage;
-    AbstractFactory hdfactory;
-    AbstractFactory wsfactory;
+    private Package platinumPackage;
+    private AbstractFactory hdfactory;
+    private AbstractFactory wsfactory;
 
     public PackagePlatinum(String internetType, String webType) {
         platinumPackage = new Package();

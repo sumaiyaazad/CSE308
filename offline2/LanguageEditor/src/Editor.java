@@ -1,8 +1,8 @@
 public class Editor {
-    public Parser parser;
-    public Aesthetics fontAesthetics=new Font();
-    public Aesthetics colorAesthetics=new Color();
-    public Aesthetics styleAesthetics=new Style();
+    private Parser parser;
+    private Aesthetics fontAesthetics=new Font();
+    private Aesthetics colorAesthetics=new Color();
+    private Aesthetics styleAesthetics=new Style();
     Editor(String language){
 //        styleAesthetics.setAesthetics("Normal");
 //        colorAesthetics.setAesthetics("Blue");

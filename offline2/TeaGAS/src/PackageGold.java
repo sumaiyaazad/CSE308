@@ -2,12 +2,12 @@ import Interface.Controller;
 import Interface.Storage;
 
 public class PackageGold implements PackageBuilder {
-    Package goldPackage;
-    Controller button;
-    Storage sd;
+    private Package goldPackage;
+    private Controller button;
+    private Storage sd;
 
-    AbstractFactory hdfactory;
-    AbstractFactory wsfactory;
+    private AbstractFactory hdfactory;
+    private AbstractFactory wsfactory;
 
     public PackageGold(String internetType, String webType) {
 //        if(internetType.equalsIgnoreCase("ethernet")){

@@ -1,7 +1,7 @@
 public class PackageDiamond implements PackageBuilder {
-    Package diamondPackage;
-    AbstractFactory hdfactory;
-    AbstractFactory wsfactory;
+    private Package diamondPackage;
+    private AbstractFactory hdfactory;
+    private AbstractFactory wsfactory;
 
     public PackageDiamond(String internetType, String webType) {
         diamondPackage = new Package();
