@@ -1,7 +1,6 @@
 public class CharacterSummation implements AdvancedSumCalculator{
     @Override
     public void calculateSumInteger(String filename) {
-
     }
 
     @Override
