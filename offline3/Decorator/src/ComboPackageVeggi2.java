@@ -3,9 +3,9 @@ public class ComboPackageVeggi2 extends PizzaDecorator{
         super(newPizza);
     }
     public String preparePizza(){
-        return super.preparePizza() +" With French Fry and Coke ";
+        return super.preparePizza() +" with Onion Rings and Coffee ";
     }
     public double pizzaPrice()   {
-        return super.pizzaPrice()+100.0+150.0;
+        return super.pizzaPrice()+100.0+200.0;
     }
 }

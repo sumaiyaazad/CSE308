@@ -3,7 +3,7 @@ public class NormalPackageVeggi extends PizzaDecorator{
         super(newPizza);
     }
     public String preparePizza(){
-        return super.preparePizza() +" With Onion Rings ";
+        return super.preparePizza() +" with Onion Rings ";
     }
     public double pizzaPrice()   {
         return super.pizzaPrice()+100.0;

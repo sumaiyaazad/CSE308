@@ -3,7 +3,7 @@ public class NormalPackageBeef extends PizzaDecorator{
         super(newPizza);
     }
     public String preparePizza(){
-        return super.preparePizza() +" With French Fry ";
+        return super.preparePizza() +" with French Fry ";
     }
     public double pizzaPrice()   {
         return super.pizzaPrice()+100.0;
