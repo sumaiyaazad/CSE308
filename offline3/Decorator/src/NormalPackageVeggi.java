@@ -1,5 +1,5 @@
-public class NormalPackageBeef extends PizzaDecorator{
-    public NormalPackageBeef(Pizza newPizza) {
+public class NormalPackageVeggi extends PizzaDecorator{
+    public NormalPackageVeggi(Pizza newPizza) {
         super(newPizza);
     }
     public String preparePizza(){
