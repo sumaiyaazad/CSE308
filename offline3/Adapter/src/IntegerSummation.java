@@ -5,7 +5,7 @@ public class IntegerSummation implements AdvancedSumCalculator{
     }
 
     @Override
-    public void calculateSumCharacter() {
+    public void calculateSumCharacter(String filename) {
 
     }
 }
