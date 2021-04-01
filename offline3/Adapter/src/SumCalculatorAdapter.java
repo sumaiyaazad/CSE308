@@ -4,7 +4,7 @@ public class SumCalculatorAdapter implements  SumCalculator{
     public SumCalculatorAdapter(String inputType) {
         if(inputType.equalsIgnoreCase("integer")){
             summationCalculator = new IntegerSummation();
-        }else if(inputType.equalsIgnoreCase("integer")){
+        }else if(inputType.equalsIgnoreCase("character")){
             summationCalculator = new CharacterSummation();
         }
     }
