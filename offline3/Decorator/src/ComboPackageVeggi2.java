@@ -1,5 +1,5 @@
-public class ComboPackageVeggi1 extends PizzaDecorator{
-    public ComboPackageVeggi1(Pizza newPizza) {
+public class ComboPackageVeggi2 extends PizzaDecorator{
+    public ComboPackageVeggi2(Pizza newPizza) {
         super(newPizza);
     }
     public String preparePizza(){
