@@ -13,8 +13,8 @@ public class SumCalculatorAdapter implements  SumCalculator{
     public void calculateSum(String inputType, String filename) {
         if(inputType.equalsIgnoreCase("integer")){
             summationCalculator.calculateSumInteger(filename);
-        }else if(inputType.equalsIgnoreCase("integer")){
-            summationCalculator.calculateSumCharacter();
+        }else if(inputType.equalsIgnoreCase("character")){
+            summationCalculator.calculateSumCharacter(filename);
         }
     }
 }
