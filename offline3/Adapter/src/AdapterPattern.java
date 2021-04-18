@@ -1,7 +1,8 @@
+import java.io.FileNotFoundException;
 import java.util.Scanner;
 
 public class AdapterPattern {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws FileNotFoundException {
         SummationOperation sumop=new SummationOperation();
         Scanner s = new Scanner(System.in);
         for(int i=0;;i++) {

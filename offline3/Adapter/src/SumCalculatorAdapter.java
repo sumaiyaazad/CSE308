@@ -1,3 +1,5 @@
+import java.io.FileNotFoundException;
+
 public class SumCalculatorAdapter implements  SumCalculator{
     AdvancedSumCalculator summationCalculator;
 
@@ -10,7 +12,7 @@ public class SumCalculatorAdapter implements  SumCalculator{
     }
 
     @Override
-    public void calculateSum(String inputType, String filename) {
+    public void calculateSum(String inputType, String filename) throws FileNotFoundException {
         if(inputType.equalsIgnoreCase("integer")){
             summationCalculator.calculateSumInteger(filename);
         }else if(inputType.equalsIgnoreCase("character")){
