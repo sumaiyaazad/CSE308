@@ -23,6 +23,6 @@ public class CharacterSummation implements AdvancedSumCalculator{
         }catch(FileNotFoundException e){
             System.out.println("Your file is not present in the input folder");
         }
-        System.out.println("Sum of character(ascii value) from "+filename+" : "+sum);
+        System.out.println("Sum of character(ascii value) from "+filename+".txt : "+sum);
     }
 }
