@@ -17,6 +17,7 @@ public abstract class Organization {
     public String getType() {
         return type;
     }
-    public abstract void serviceRequest(Organization org);
+    public abstract void serviceRequest();
     public abstract void provideService();
+    public abstract void receivedService();
 }

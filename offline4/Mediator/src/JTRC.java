@@ -4,17 +4,14 @@ public class JTRC extends Organization{
         this.name=name;
         this.type=type;
     }
-    public void serviceRequest(Organization org){
-        System.out.println(org.getName()+" requests for "+this.type+" service");
-        organizations.add(org);
+    public void serviceRequest(){
+        System.out.println("JTRC : received request from JCC");
     }
     public void provideService(){
-        if(this.organizations.size()!=0){
-            System.out.println(this.name+" serves the request of "+this.organizations.get(0).getName());
-            this.organizations.remove(0);
-        }
-        else{
-            System.out.println(this.name+" has no pending request to serve");
-        }
+        System.out.println("JTRC : served 1st pending request");
+    }
+
+    public void receivedService() {
+        System.out.println("JTRC : received service from JCC");
     }
 }
