@@ -36,6 +36,17 @@ public class MyTest {
     }
 
     @Test
+    public void testRandomList(){
+        int[] myList=new int[rand.nextInt(10)];
+        for (int i = 0; i < myList.length; i++) {
+            myList[i]=rand.nextInt(20);
+        }
+        MySortedList mySortedList= new MySortedList(copyArray(myList));
+        Arrays.sort(myList);
+        assertArrayEquals("Must return a sorted list with random size and element", myList, mySortedList.getMySortedList());
+    }
+
+    @Test
     public void testRandomSizeList(){
         int[] myList=new int[rand.nextInt(10)];
         for (int i = 0; i < myList.length; i++) {
